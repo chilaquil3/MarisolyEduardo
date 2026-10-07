@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Marisol & Eduardo | Nuestra Boda</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   PALETA DE COLORES
+===================================================== */
+
+:root {
+    --verde-olivo: #59623B;
+    --verde-olivo-oscuro: #3F4729;
+    --verde-suave: #747C52;
+
+    --dorado: #B89B5E;
+    --dorado-claro: #D4BD83;
+    --dorado-oscuro: #92763E;
+
+    --crema: #F7F3E8;
+    --crema-oscuro: #ECE5D2;
+
+    --texto: #4B493B;
+    --blanco: #FFFFFF;
+}
+
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--crema);
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 500;
+    color: var(--verde-olivo);
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--dorado-oscuro);
+    margin-bottom: 15px;
+}
+
+.linea {
+    width: 70px;
+    height: 1px;
+    background: var(--dorado);
+    margin: 25px auto;
+}
+
+
+/* =====================================================
+   PANTALLA DE ENTRADA
+===================================================== */
+
+.intro {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #FBF8EF 0%,
+            #F0E9D8 100%
+        );
+
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro::before,
+.intro::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border: 1px solid var(--dorado-claro);
+
+    border-radius: 50%;
+
+    opacity: .45;
+}
+
+.intro::before {
+    top: -80px;
+    left: -80px;
+}
+
+.intro::after {
+    bottom: -80px;
+    right: -80px;
+}
+
+.intro.ocultar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.intro-contenido {
+    text-align: center;
+    padding: 30px;
+
+    animation: aparecer 1.5s ease;
+}
+
+.intro-pequeno {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: var(--dorado-oscuro);
+}
+
+.intro-nombres {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(60px, 12vw, 110px);
+
+    line-height: .85;
+
+    font-weight: 300;
+
+    color: var(--verde-olivo);
+
+    margin: 35px 0;
+}
+
+.intro-fecha {
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    color: var(--verde-suave);
+}
+
+.boton-abrir {
+    margin-top: 40px;
+
+    padding: 15px 35px;
+
+    background: var(--verde-olivo);
+
+    color: white;
+
+    border: 1px solid var(--dorado);
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: .4s;
+}
+
+.boton-abrir:hover {
+    background: var(--verde-olivo-oscuro);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+.portada {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #727A50 0%,
+            #59623B 45%,
+            #3F4729 100%
+        );
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.portada::before,
+.portada::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(212,189,131,.55);
+
+    border-radius: 50%;
+}
+
+.portada::before {
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    left: -250px;
+}
+
+.portada::after {
+    width: 600px;
+    height: 600px;
+
+    bottom: -350px;
+    right: -300px;
+}
+
+.portada-contenido {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 30px;
+
+    animation: aparecer 2s ease;
+}
+
+.portada small {
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    color: var(--dorado-claro);
+}
+
+.nombres {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(65px, 12vw, 120px);
+
+    font-weight: 300;
+
+    line-height: .85;
+
+    margin: 35px 0;
+}
+
+.ampersand {
+    font-size: 55px;
+
+    font-style: italic;
+
+    margin: 10px 0;
+
+    color: var(--dorado-claro);
+}
+
+.fecha-portada {
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    color: #F4EACF;
+}
+
+
+/* =====================================================
+   FRASE
+===================================================== */
+
+.frase {
+    background: var(--crema);
+}
+
+.frase-texto {
+    max-width: 700px;
+
+    margin: auto;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    color: var(--verde-olivo);
+}
+
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+.contador {
+    background:
+        linear-gradient(
+            135deg,
+            #ECE5D2,
+            #F8F5EB
+        );
+}
+
+.contador-grid {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 45px;
+}
+
+.tiempo {
+    min-width: 100px;
+
+    padding: 18px 12px;
+
+    border-top: 1px solid var(--dorado);
+
+    border-bottom: 1px solid var(--dorado);
+}
+
+.tiempo strong {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    color: var(--verde-olivo);
+}
+
+.tiempo span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--dorado-oscuro);
+}
+
+
+/* =====================================================
+   PADRES Y PADRINOS
+===================================================== */
+
+.familia {
+    background: var(--verde-olivo);
+
+    color: white;
+}
+
+.familia .titulo {
+    color: #F4EACF;
+}
+
+.familia .subtitulo {
+    color: var(--dorado-claro);
+}
+
+.familia .linea {
+    background: var(--dorado-claro);
+}
+
+.familia-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    max-width: 750px;
+
+    margin: 45px auto 0;
+}
+
+.familia h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+    color: var(--dorado-claro);
+}
+
+.familia p {
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+.padrinos {
+    margin-top: 75px;
+}
+
+
+/* =====================================================
+   EVENTOS
+===================================================== */
+
+.eventos {
+    background: var(--crema);
+}
+
+.evento {
+    max-width: 700px;
+
+    margin: 45px auto;
+
+    background: rgba(255,255,255,.75);
+
+    padding: 50px 30px;
+
+    border: 1px solid var(--dorado-claro);
+
+    box-shadow:
+        0 20px 50px rgba(63,71,41,.10);
+
+    transition: .4s;
+}
+
+.evento:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 25px 60px rgba(63,71,41,.16);
+}
+
+.evento-icono {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+    color: var(--dorado);
+}
+
+.evento h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: var(--verde-olivo);
+}
+
+.evento .hora {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin: 18px 0;
+
+    color: var(--dorado-oscuro);
+}
+
+.evento p {
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.boton {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    border: 1px solid var(--dorado);
+
+    color: var(--verde-olivo);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.boton:hover {
+    background: var(--verde-olivo);
+
+    color: white;
+}
+
+
+/* =====================================================
+   VESTIMENTA
+===================================================== */
+
+.vestimenta {
+    background:
+        linear-gradient(
+            135deg,
+            #59623B,
+            #747C52
+        );
+
+    color: white;
+}
+
+.vestimenta .titulo {
+    color: #F5EBCF;
+}
+
+.vestimenta .subtitulo {
+    color: var(--dorado-claro);
+}
+
+.vestimenta .linea {
+    background: var(--dorado-claro);
+}
+
+.foto-vestimenta {
+    max-width: 450px;
+
+    width: 100%;
+
+    margin: 30px auto;
+
+    display: block;
+
+    border-radius: 3px;
+
+    border: 2px solid var(--dorado-claro);
+
+    box-shadow:
+        0 15px 40px rgba(30,35,20,.30);
+}
+
+.gala {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 40px;
+
+    color: var(--dorado-claro);
+}
+
+
+/* =====================================================
+   NIÑOS
+===================================================== */
+
+.ninos {
+    min-height: 65vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #747C52,
+            #3F4729
+        );
+
+    color: white;
+}
+
+.ninos .titulo {
+    color: white;
+}
+
+.ninos .subtitulo {
+    color: var(--dorado-claro);
+}
+
+.ninos .linea {
+    background: var(--dorado-claro);
+}
+
+.ninos p {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   CONFIRMACIÓN
+===================================================== */
+
+.confirmacion {
+    background: var(--crema-oscuro);
+}
+
+.confirmacion p {
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    line-height: 1.8;
+}
+
+.boton-confirmar {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 17px 42px;
+
+    background: var(--verde-olivo);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: .3s;
+
+    border: 1px solid var(--dorado);
+
+    box-shadow:
+        0 8px 25px rgba(63,71,41,.18);
+}
+
+.boton-confirmar:hover {
+    background: var(--verde-olivo-oscuro);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final {
+    min-height: 75vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #727A50,
+            #3F4729
+        );
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.final::before {
+    content: "♡";
+
+    position: absolute;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 450px;
+
+    color: rgba(212,189,131,.07);
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.final h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(55px, 10vw, 90px);
+
+    font-weight: 300;
+
+    color: #F4EACF;
+
+    position: relative;
+}
+
+.final p {
+    margin-top: 20px;
+
+    letter-spacing: 4px;
+
+    color: var(--dorado-claro);
+}
+
+
+/* =====================================================
+   BOTÓN DE MÚSICA
+===================================================== */
+
+.musica {
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--dorado-claro);
+
+    background: var(--verde-olivo);
+
+    color: var(--dorado-claro);
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.20);
+
+    transition: .3s;
+}
+
+.musica:hover {
+    transform: scale(1.08);
+
+    background: var(--verde-olivo-oscuro);
+}
+
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+.animar {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.animar.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:700px) {
+
+    section {
+        padding: 75px 18px;
+    }
+
+    .titulo {
+        font-size: 43px;
+    }
+
+    .nombres {
+        font-size: 70px;
+    }
+
+    .familia-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contador-grid {
+        gap: 8px;
+    }
+
+    .tiempo {
+        min-width: 75px;
+    }
+
+    .tiempo strong {
+        font-size: 42px;
+    }
+
+    .frase-texto {
+        font-size: 25px;
+    }
+
+    .evento {
+        padding: 40px 20px;
+    }
+
+    .final {
+        min-height: 65vh;
+    }
+
+    .intro-nombres {
+        font-size: 70px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCIR MOVIMIENTO
+===================================================== */
+
+@media(prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PANTALLA DE ENTRADA
+===================================================== -->
+
+<div class="intro" id="intro">
+
+    <div class="intro-contenido">
+
+        <div class="intro-pequeno">
+            Nuestra boda
+        </div>
+
+        <div class="intro-nombres">
+
+            Marisol
+
+            <br>
+
+            <span style="font-size:.55em;">
+                &
+            </span>
+
+            <br>
+
+            Eduardo
+
+        </div>
+
+        <div class="intro-fecha">
+            28 · 11 · 2026
+        </div>
+
+        <button
+            class="boton-abrir"
+            onclick="abrirInvitacion()">
+
+            Abrir invitación
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     PORTADA
+===================================================== -->
+
+<section class="portada">
+
+    <div class="portada-contenido">
+
+        <small>
+            Nuestra Boda
+        </small>
+
+        <div class="nombres">
+
+            Marisol
+
+            <div class="ampersand">
+                &
+            </div>
+
+            Eduardo
+
+        </div>
+
+        <div class="fecha-portada">
+            28 · 11 · 2026
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FRASE
+===================================================== -->
+
+<section class="frase animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Con amor
+        </div>
+
+        <div class="linea"></div>
+
+        <p class="frase-texto">
+
+            Dios escribió nuestra historia mucho antes
+            de que nosotros la conociéramos.
+
+            Hoy con gratitud queremos invitarte a celebrar
+            el inicio de nuestra familia.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTADOR
+===================================================== -->
+
+<section class="contador animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Faltan
+        </div>
+
+        <h2 class="titulo">
+            Para nuestro gran día
+        </h2>
+
+        <div class="contador-grid">
+
+            <div class="tiempo">
+
+                <strong id="dias">
+                    0
+                </strong>
+
+                <span>
+                    Días
+                </span>
+
+            </div>
+
+
+            <div class="tiempo">
+
+                <strong id="horas">
+                    0
+                </strong>
+
+                <span>
+                    Horas
+                </span>
+
+            </div>
+
+
+            <div class="tiempo">
+
+                <strong id="minutos">
+                    0
+                </strong>
+
+                <span>
+                    Minutos
+                </span>
+
+            </div>
+
+
+            <div class="tiempo">
+
+                <strong id="segundos">
+                    0
+                </strong>
+
+                <span>
+                    Segundos
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PADRES
+===================================================== -->
+
+<section class="familia animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Con la bendición de
+        </div>
+
+        <h2 class="titulo">
+            Nuestros Padres
+        </h2>
+
+        <div class="linea"></div>
+
+
+        <div class="familia-grid">
+
+            <div>
+
+                <h3>
+                    Novia
+                </h3>
+
+                <p>
+                    Marcos Nava González
+                </p>
+
+                <p>
+                    Violeta Zepeda Serrano
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Novio
+                </h3>
+
+                <p>
+                    Pascual Pichardo Alcántara
+                </p>
+
+                <p>
+                    Oralia Fernández Fernández
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="padrinos">
+
+            <h2 class="titulo">
+                Padrinos
+            </h2>
+
+            <div class="linea"></div>
+
+            <p>
+                Rodrigo Fernández García
+            </p>
+
+            <p>
+                Dolores Francisa Fernández Castillo
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EVENTOS
+===================================================== -->
+
+<section class="eventos animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Acompáñanos
+        </div>
+
+        <h2 class="titulo">
+            Nuestro día
+        </h2>
+
+
+        <!-- CEREMONIA -->
+
+        <div class="evento">
+
+            <div class="evento-icono">
+                ♡
+            </div>
+
+            <h3>
+                Ceremonia
+            </h3>
+
+            <div class="hora">
+                28 de noviembre de 2026 · 1:00 PM
+            </div>
+
+            <p>
+                Parroquia de San Mateo Apóstol
+            </p>
+
+            <p>
+                Av. Benito Juárez,<br>
+                C.P. 52104,<br>
+                San Mateo Atenco, Méx.
+            </p>
+
+            <a
+                class="boton"
+                href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Mateo+Apóstol+San+Mateo+Atenco+México"
+                target="_blank"
+                rel="noopener">
+
+                Ver ubicación
+
+            </a>
+
+        </div>
+
+
+        <!-- RECEPCIÓN -->
+
+        <div class="evento">
+
+            <div class="evento-icono">
+                ♧
+            </div>
+
+            <h3>
+                Recepción
+            </h3>
+
+            <div class="hora">
+                2:30 PM
+            </div>
+
+            <p>
+                Jardín “Los Patos”
+            </p>
+
+            <p>
+                Av. Paseo Tollocan #117,<br>
+                Reforma, 52120,<br>
+                San Mateo Atenco, Méx.
+            </p>
+
+            <a
+                class="boton"
+                href="https://www.google.com/maps/search/?api=1&query=Jardin+Los+Patos+Av+Paseo+Tollocan+117+San+Mateo+Atenco+Mexico"
+                target="_blank"
+                rel="noopener">
+
+                Ver ubicación
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VESTIMENTA
+===================================================== -->
+
+<section class="vestimenta animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Código de vestimenta
+        </div>
+
+        <h2 class="titulo">
+            De gala
+        </h2>
+
+        <div class="linea"></div>
+
+
+        <!-- ÚNICA FOTO DE LA INVITACIÓN -->
+
+        <img
+            src="formal.jpg"
+            class="foto-vestimenta"
+            alt="Código de vestimenta">
+
+
+        <div class="gala">
+            ✦ De gala ✦
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NIÑOS
+===================================================== -->
+
+<section class="ninos animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Un día para todos
+        </div>
+
+        <h2 class="titulo">
+            Los pequeños también son parte
+        </h2>
+
+        <div class="linea"></div>
+
+        <p>
+
+            Los pequeños también son parte
+            de nuestra celebración.
+
+            Tendrán un espacio especialmente preprarado para ellos.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONFIRMACIÓN
+===================================================== -->
+
+<section class="confirmacion animar">
+
+    <div class="contenedor">
+
+        <div class="subtitulo">
+            Tu presencia es muy importante
+        </div>
+
+        <h2 class="titulo">
+            Confirmación
+        </h2>
+
+        <div class="linea"></div>
+
+        <p>
+            Prepárate para un día lleno de amor,
+            risas, baile y momentos inolvidables.
+        </p>
+
+        <p>
+            ¡No podemos esperar para celebrar contigo!
+        </p>
+
+        <a
+            href="https://wa.me/7201794493?text=Hola%20Marisol%20y%20Eduardo%2C%20quiero%20confirmar%20mi%20asistencia%20a%20su%20boda."
+            class="boton-confirmar"
+            target="_blank"
+            rel="noopener">
+
+            Confirmar asistencia
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <div class="contenedor">
+
+        <div
+            class="subtitulo"
+            style="color:var(--dorado-claro);">
+
+            Con cariño
+
+        </div>
+
+        <h2>
+            Marisol & Eduardo
+        </h2>
+
+        <p>
+            28 · 11 · 2026
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MÚSICA
+===================================================== -->
+
+<audio
+    id="musicaAudio"
+    loop>
+
+    <source
+        src="cancionboda.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<button
+    class="musica"
+    onclick="reproducirMusica()"
+    id="botonMusica"
+    aria-label="Reproducir o pausar música">
+
+    ♪
+
+</button>
+
+
+<script>
+
+/* =====================================================
+   PANTALLA INICIAL
+===================================================== */
+
+function abrirInvitacion() {
+
+    const intro =
+        document.getElementById("intro");
+
+    intro.classList.add("ocultar");
+
+
+    setTimeout(() => {
+
+        intro.style.display = "none";
+
+    }, 1000);
+
+
+    const audio =
+        document.getElementById("musicaAudio");
+
+
+    audio.play()
+        .then(() => {
+
+            document.getElementById("botonMusica")
+                .innerHTML = "❚❚";
+
+        })
+        .catch(() => {});
+
+}
+
+
+/* =====================================================
+   CUENTA REGRESIVA
+===================================================== */
+
+const fechaBoda =
+    new Date(
+        "November 28, 2026 13:00:00"
+    ).getTime();
+
+
+function actualizarContador() {
+
+    const ahora =
+        new Date().getTime();
+
+
+    const diferencia =
+        fechaBoda - ahora;
+
+
+    if (diferencia <= 0) {
+
+        document.getElementById("dias")
+            .innerText = "0";
+
+        document.getElementById("horas")
+            .innerText = "0";
+
+        document.getElementById("minutos")
+            .innerText = "0";
+
+        document.getElementById("segundos")
+            .innerText = "0";
+
+        return;
+
+    }
+
+
+    const dias =
+        Math.floor(
+            diferencia /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    const horas =
+        Math.floor(
+            (diferencia %
+            (1000 * 60 * 60 * 24))
+            /
+            (1000 * 60 * 60)
+        );
+
+
+    const minutos =
+        Math.floor(
+            (diferencia %
+            (1000 * 60 * 60))
+            /
+            (1000 * 60)
+        );
+
+
+    const segundos =
+        Math.floor(
+            (diferencia %
+            (1000 * 60))
+            /
+            1000
+        );
+
+
+    document.getElementById("dias")
+        .innerText = dias;
+
+
+    document.getElementById("horas")
+        .innerText =
+        horas
+        .toString()
+        .padStart(2, "0");
+
+
+    document.getElementById("minutos")
+        .innerText =
+        minutos
+        .toString()
+        .padStart(2, "0");
+
+
+    document.getElementById("segundos")
+        .innerText =
+        segundos
+        .toString()
+        .padStart(2, "0");
+
+}
+
+
+actualizarContador();
+
+
+setInterval(
+    actualizarContador,
+    1000
+);
+
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+const audio =
+    document.getElementById("musicaAudio");
+
+
+const boton =
+    document.getElementById("botonMusica");
+
+
+function reproducirMusica() {
+
+    if (audio.paused) {
+
+        audio.play()
+            .then(() => {
+
+                boton.innerHTML = "❚❚";
+
+            })
+            .catch(() => {
+
+                alert(
+                    "No se pudo reproducir la música. Revisa que cancion.mp3 esté en la misma carpeta que index.html."
+                );
+
+            });
+
+    } else {
+
+        audio.pause();
+
+        boton.innerHTML = "♪";
+
+    }
+
+}
+
+
+/* =====================================================
+   ANIMACIONES AL HACER SCROLL
+===================================================== */
+
+const elementos =
+    document.querySelectorAll(".animar");
+
+
+const observador =
+    new IntersectionObserver(
+
+        (entradas) => {
+
+            entradas.forEach(
+                (entrada) => {
+
+                    if (
+                        entrada.isIntersecting
+                    ) {
+
+                        entrada.target
+                            .classList
+                            .add("visible");
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+
+elementos.forEach(
+    (elemento) => {
+
+        observador.observe(
+            elemento
+        );
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
